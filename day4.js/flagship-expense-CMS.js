@@ -25,7 +25,7 @@ function add_new_expence() {
 }
 
 function update_expense() {
-    exp_to_update = prompt("Enter the name of expense you want to update : ");
+    let exp_to_update = prompt("Enter the name of expense you want to update : ");
     let status = expenses.includes(exp_to_update);
     if (status==true){
         let new_amount = prompt(`Enter the new Amount of ${exp_to_update} : `);
@@ -38,7 +38,7 @@ function update_expense() {
 }
 
 function delete_expense() {
-    exp_to_delete = prompt("Enter the Name of Expense To Delete :");
+    let exp_to_delete = prompt("Enter the Name of Expense To Delete :");
     let status = expenses.includes(exp_to_delete);
     if (status==true){
         let no = expenses.indexOf(exp_to_delete);
