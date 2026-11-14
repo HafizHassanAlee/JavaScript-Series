@@ -166,7 +166,9 @@ function removeLastCountry() {
       }
     }
 
-
+function showTotal() {
+      alert("Total countries: " + countries.length);
+    }
 
 
 
