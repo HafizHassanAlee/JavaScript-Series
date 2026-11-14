@@ -19,6 +19,37 @@ var countries = [
              "Enter your choice:";
     }
 
+
+
+        // ---------- Helpers ----------
+    // Returns text describing one country
+    function describeCountry(country) {
+      return country.flag + " " + country.name +
+        "\n   Capital: " + country.capital +
+        "\n   Continent: " + country.continent +
+        "\n   Population: " + country.population.toLocaleString();
+    }
+
+    // Returns the index of a country, or -1 if not found
+    function findCountryIndex(name) {
+      var target = name.toLowerCase();
+      for (var i = 0; i < countries.length; i++) {
+        if (countries[i].name.toLowerCase() === target) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
+    // Returns a valid population, or -1 if invalid
+    function parsePopulation(text) {
+      var value = Number(text);
+      if (text.trim() === "" || isNaN(value) || value < 0) {
+        return -1;
+      }
+      return Math.floor(value);
+    }
+
         // ---------- Features ----------
 function viewAllCountries() {
       if (countries.length == 0) {
