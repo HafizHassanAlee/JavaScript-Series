@@ -32,6 +32,53 @@ function viewAllCountries() {
       console.log(output);
     }
 
+function addCountry() {
+      var name = prompt("Enter country name:");
+      if (name === null || name.trim() === "") {
+        alert("Cancelled: name cannot be empty.");
+        return;
+      }
+      name = name.trim();
+      if (findCountryIndex(name) !== -1) {
+        alert(name + " already exists.");
+        return;
+      }
+
+      var flag = prompt("Enter flag emoji:");
+      var capital = prompt("Enter capital:");
+      var continent = prompt("Enter continent:");
+      var popText = prompt("Enter population:");
+      if (flag === null || capital === null || continent === null || popText === null) {
+        alert("Cancelled. Country was not added.");
+        return;
+      }
+
+      var population = parsePopulation(popText);
+      if (population === -1) {
+        alert("Invalid population. Country was not added.");
+        return;
+      }
+
+      var newCountry = {
+        name: name,
+        flag: flag,
+        capital: capital,
+        continent: continent,
+        population: population
+      };
+      countries.push(newCountry);
+      alert(name + " added successfully!");
+    }
+
+
+
+
+
+
+
+
+
+
     function main() {
       var running = true;
 
