@@ -71,6 +71,60 @@ function addCountry() {
     }
 
 
+function searchCountry() {
+      var name = prompt("Enter country name to search:");
+      if (name === null) {
+        return;
+      }
+      var index = findCountryIndex(name.trim());
+      if (index === -1) {
+        alert("Country not found");
+      } else {
+        alert(describeCountry(countries[index]));
+      }
+    }
+
+function updateCountry() {
+      var name = prompt("Enter the name of the country to update:");
+      if (name === null) {
+        return;
+      }
+      var index = findCountryIndex(name.trim());
+      if (index === -1) {
+        alert("Country not found");
+        return;
+      }
+
+      var choice = prompt(
+        "Updating " + countries[index].flag + " " + countries[index].name +
+        "\n\n1. Update capital\n2. Update population\n\nEnter 1 or 2:"
+      );
+
+      if (choice === "1") {
+        var newCapital = prompt("Enter new capital:");
+        if (newCapital === null || newCapital.trim() === "") {
+          alert("No changes made.");
+        } else {
+          countries[index].capital = newCapital.trim();
+          alert("Capital updated!");
+        }
+      } else if (choice === "2") {
+        var popText = prompt("Enter new population:");
+        if (popText === null) {
+          alert("No changes made.");
+        } else {
+          var population = parsePopulation(popText);
+          if (population === -1) {
+            alert("Invalid population. No changes made.");
+          } else {
+            countries[index].population = population;
+            alert("Population updated!");
+          }
+        }
+      } else {
+        alert("Invalid choice. No changes made.");
+      }
+    }
 
 
 
