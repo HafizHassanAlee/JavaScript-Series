@@ -19,6 +19,19 @@ var countries = [
              "Enter your choice:";
     }
 
+        // ---------- Features ----------
+function viewAllCountries() {
+      if (countries.length == 0) {
+        alert("No countries in the list.");
+        return;
+      }
+      var output = "ALL COUNTRIES\n\n";
+      for (var i = 0; i < countries.length; i++) {
+        output += (i + 1) + ". " + describeCountry(countries[i]) + "\n\n";
+      }
+      console.log(output);
+    }
+
     function main() {
       var running = true;
 
