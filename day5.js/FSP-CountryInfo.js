@@ -157,6 +157,14 @@ function updateCountry() {
       }
     }
 
+function removeLastCountry() {
+      if (countries.length === 0) {
+        alert("There are no countries to remove.");
+      } else {
+        var removed = countries.pop();
+        alert("Removed: " + removed.flag + " " + removed.name);
+      }
+    }
 
 
 
