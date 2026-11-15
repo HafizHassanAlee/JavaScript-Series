@@ -18,3 +18,79 @@ let seatGrid = [
   ["C1", "C2", "C3", "C4"],
   ["D1", "D2", "D3", "D4"]
 ];
+
+// ==========================================
+// 2. DISPLAY & UI FUNCTIONS
+// ==========================================
+
+function displayMenu() {
+  console.log("================================");
+  console.log("       CINEMA BOOKING SYSTEM");
+  console.log("================================");
+  console.log("1. View Movies");
+  console.log("2. Select Movie");
+  console.log("3. View Available Seats");
+  console.log("4. Book Ticket");
+  console.log("5. Cancel Booking");
+  console.log("6. View My Bookings");
+  console.log("7. Calculate Total Bill");
+  console.log("8. Exit");
+  console.log("================================");
+}
+
+function viewMovies() {
+  console.log("\n================================");
+  console.log("       AVAILABLE MOVIES");
+  console.log("================================");
+  for (let i = 0; i < movies.length; i++) {
+    console.log(`${i + 1}. ${movies[i].title} - $${movies[i].price.toFixed(2)}`);
+  }
+  console.log("");
+}
+
+function selectMovie() {
+  viewMovies();
+  let choice = Number(prompt("Enter the number of the movie you want to select (1-5):"));
+  
+  if (choice >= 1 && choice <= movies.length) {
+    selectedMovie = movies[choice - 1];
+    console.log(`\n✅ Success! You selected: "${selectedMovie.title}" ($${selectedMovie.price.toFixed(2)})\n`);
+  } else {
+    console.log("\n❌ Invalid choice. Please select a valid movie number (1-5).\n");
+  }
+}
+
+function viewAvailableSeats() {
+  console.log("\n================================");
+  console.log("       CINEMA SEATING CHART     ");
+  console.log("================================");
+  
+  for (let i = 0; i < seatGrid.length; i++) {
+    let rowDisplay = "";
+    for (let j = 0; j < seatGrid[i].length; j++) {
+      let seat = seatGrid[i][j];
+      if (bookedSeats.includes(seat)) {
+        rowDisplay += "[ X ] "; // Booked
+      } else {
+        rowDisplay += `[${seat}] `; // Available
+      }
+    }
+    console.log(rowDisplay);
+  }
+  console.log("Legend: [Seat] = Available | [ X ] = Booked\n");
+}
+
+function viewMyBookings() {
+  console.log("\n================================");
+  console.log("        MY BOOKINGS");
+  console.log("================================");
+  if (myBookings.length === 0) {
+    console.log("You have no active ticket bookings.\n");
+  } else {
+    if (selectedMovie) {
+      console.log(`Selected Movie: ${selectedMovie.title}`);
+    }
+    console.log(`Booked Seats: ${myBookings.join(", ")}`);
+    console.log(`Total Tickets: ${myBookings.length}\n`);
+  }
+}
