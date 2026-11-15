@@ -94,3 +94,86 @@ function viewMyBookings() {
     console.log(`Total Tickets: ${myBookings.length}\n`);
   }
 }
+
+// ==========================================
+// 3. CORE TRANSACTION LOGIC
+// ==========================================
+
+function bookTicket() {
+  if (!selectedMovie) {
+    console.log("\n⚠️ Please select a movie first (Option 2) before booking tickets!\n");
+    return;
+  }
+
+  viewAvailableSeats();
+  let seatChoice = prompt("Enter the seat code you want to book (e.g., A1):").toUpperCase().trim();
+
+  let seatExists = false;
+  for (let i = 0; i < seatGrid.length; i++) {
+    if (seatGrid[i].includes(seatChoice)) {
+      seatExists = true;
+      break;
+    }
+  }
+
+  if (!seatExists) {
+    console.log(`\n❌ Seat "${seatChoice}" does not exist in the theater.\n`);
+    return;
+  }
+
+  if (bookedSeats.includes(seatChoice)) {
+    console.log(`\n❌ Seat "${seatChoice}" is already reserved! Please choose another seat.\n`);
+  } else {
+    bookedSeats.push(seatChoice); 
+    myBookings.push(seatChoice);  
+    console.log(`\n🎉 Success! Seat "${seatChoice}" has been booked for "${selectedMovie.title}".\n`);
+  }
+}
+
+function cancelBooking() {
+  if (myBookings.length === 0) {
+    console.log("\n⚠️ You have no active bookings to cancel.\n");
+    return;
+  }
+
+  console.log("\nYour current booked seats:", myBookings.join(", "));
+  let cancelSeat = prompt("Enter the seat code you want to cancel:").toUpperCase().trim();
+
+  let index = myBookings.indexOf(cancelSeat);
+
+  if (index !== -1) {
+    myBookings.splice(index, 1); 
+    
+    let globalIndex = bookedSeats.indexOf(cancelSeat);
+    if (globalIndex !== -1) {
+      bookedSeats.splice(globalIndex, 1);
+    }
+    
+    console.log(`\n✅ Booking for seat "${cancelSeat}" has been cancelled successfully.\n`);
+  } else {
+    console.log(`\n❌ You do not have a booking for seat "${cancelSeat}".\n`);
+  }
+}
+
+function calculateTotalBill() {
+  if (!selectedMovie || myBookings.length === 0) {
+    console.log("\n💰 Total Bill: $0.00 (No movie selected or zero tickets booked)\n");
+    return;
+  }
+
+  let subtotal = myBookings.length * selectedMovie.price;
+  let tax = subtotal * 0.05; 
+  let total = subtotal + tax;
+
+  console.log("\n================================");
+  console.log("        INVOICE / BILL");
+  console.log("================================");
+  console.log(`Movie: ${selectedMovie.title}`);
+  console.log(`Price per Ticket: $${selectedMovie.price.toFixed(2)}`);
+  console.log(`Tickets Booked: ${myBookings.length}`);
+  console.log(`Subtotal: $${subtotal.toFixed(2)}`);
+  console.log(`Tax & Fees (5%): $${tax.toFixed(2)}`);
+  console.log(`--------------------------------`);
+  console.log(`TOTAL BILL: $${total.toFixed(2)}`);
+  console.log("================================\n");
+}
