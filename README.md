@@ -1,107 +1,113 @@
-# 🚀 JavaScript Series — Daily Learning & Building
+# 🚀 JavaScript Series — Learn Daily. Build Consistently.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Runtime-Node.js-green?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Learning-Daily-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Projects-Hands--On-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Runtime-Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Progress-Daily%20Learning-2563EB?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Approach-Learn%20%7C%20Practice%20%7C%20Build-orange?style=for-the-badge" />
 </p>
 
 <p align="center">
-  <b>Learn Every Day. Build Every Day. Improve Every Day.</b>
+  <b>A practical record of my JavaScript journey — from fundamentals to real-world problem solving.</b>
 </p>
 
 ---
 
-## 📖 About This Repository
+## 📌 About This Repository
 
-Welcome to my **JavaScript Learning Journey!**
+Welcome to my **JavaScript Series**!
 
-This repository documents my daily progress as I learn JavaScript from the fundamentals to more advanced concepts.
+This repository documents my day-by-day journey of learning JavaScript. I use it to save my practice code, understand programming concepts, solve exercises, and build practical projects as my skills improve.
 
-I'm not just learning syntax or watching tutorials. I'm writing code every day, solving problems, practicing concepts, and building practical **Flagship Projects** to turn theoretical knowledge into real programming skills.
+My learning approach is simple:
 
-My approach is simple:
+- 📚 Learn concepts step by step.
+- 💻 Write the code myself and practise consistently.
+- 🧠 Solve problems to strengthen logical thinking.
+- 🛠️ Apply what I learn in practical projects.
+- 📈 Track my progress through Git and GitHub.
 
-- 📚 Learn a new JavaScript concept every day.
-- 💻 Write and practice code independently.
-- 🧠 Solve exercises and challenging questions.
-- 🛠️ Build a practical project alongside my learning.
-- 📈 Track progress and continuously improve.
+This is an actively growing repository. Topics, exercises, and projects will be added as I continue learning.
 
-This repository will keep growing as I learn something new and build something better.
+## 🗺️ Learning Roadmap
 
-## 🗺️ Learning Roadmap & Progress
-
-| Day | Topics Covered | Practice / Project |
+| Day | Topics | Practice / Project |
 |---|---|---|
-| Day 01 | Variables, Data Types, Operators, Console | Basic JavaScript Exercises |
-| Day 02 | Conditions, If/Else, Loops, Functions | Smart Examination System |
-| Day 03 | Functions, Arrow Functions, Return Values | Student Result Management System |
-| Day 04 | Arrays, Indexing, Array Operations | Personal Expense Tracker |
-| Day 05 | JavaScript Objects, Properties, Object Operations | World Flags Manager |
-| Day 06+ | Upcoming JavaScript Concepts | More Practical Projects |
+| Day 01 | JavaScript fundamentals, variables, data types, operators and console | Basic JavaScript exercises |
+| Day 02 | Conditional statements, if/else, loops and basic functions | Smart Examination System |
+| Day 03 | Functions, arrow functions and return values | Student Result Management System |
+| Day 04 | Arrays, indexing, loops and array operations | Personal Expense Tracker |
+| Day 05 | JavaScript objects, properties and object operations | World Flags Manager |
+| Day 06 | Nested objects, accessing nested properties, adding/updating/deleting properties, object methods and object loops | Student profile practice and Cinema Booking System development |
 
-*The roadmap will be updated as I progress.*
+> **Learning in progress:** This roadmap will be updated as new lessons and projects are completed.
 
-## 🛠️ Flagship Projects
+## 🛠️ Projects & Practical Applications
 
-I believe the best way to learn programming is by building things.
+I believe programming becomes clearer when concepts are applied to practical problems. These projects are developed alongside my daily learning.
 
-Alongside daily lessons, I create independent projects that combine the concepts I've learned.
+### 1. 🎬 Cinema Booking System — In Progress
 
-### 1. 🌍 Smart Examination System
+A console-based cinema booking application. The current code includes the movie list, selection flow, seat layout, booking operations and bill calculation logic.
 
-A console-based examination application featuring:
+**Current features and implementation:**
+- Display available movies and ticket prices.
+- Select a movie.
+- Display a 4 × 4 cinema seat layout.
+- Check whether a seat exists or is already booked.
+- Book and cancel seats.
+- View current bookings.
+- Calculate subtotal, 5% tax and total bill.
 
-- Student registration
-- Multiple-choice questions
-- Automatic score calculation
-- Percentage and grade calculation
-- Examination results
+**Concepts practised:** Arrays, nested arrays, objects, loops, functions, conditions, array methods, and basic application logic.
 
-**Concepts:** Functions, Arrays, Loops, Conditions, Objects and Node.js.
+**Source:** [day6.js/FSP-Movie-Booking.js](day6.js/FSP-Movie-Booking.js)
 
-### 2. 🎓 Student Result Management System
+### 2. 🌍 World Flags Manager
 
-A program that calculates and displays student academic performance.
+A country information management practice project.
 
-- Student information
-- Subject-wise marks
-- Total marks and percentage
-- Automatic grading
-- Pass/fail status
-- Highest-scoring subject
+- Display saved country information.
+- Add new countries.
+- Search for a country.
+- Update country information.
+- Delete countries.
+- Count saved countries.
 
-**Concepts:** Functions, Arrow Functions, Conditions and Calculations.
+**Concepts practised:** Objects, arrays, loops, functions and object properties.
 
 ### 3. 💰 Personal Expense Tracker
 
 A simple expense management application.
 
-- View all expenses
-- Add new expenses
-- Update expense amounts
-- Delete expenses
-- Calculate total expenses
-- Manage expense records
+- View expenses and their amounts.
+- Add and manage expense entries.
+- Calculate total expenses.
+- Practise working with related arrays.
 
-**Concepts:** Arrays, Loops, Functions and Array Methods.
+**Concepts practised:** Arrays, loops, functions and array operations.
 
-### 4. 🌐 World Flags Manager
+### 4. 🎓 Student Result Management System
 
-A country information management application.
+A practice application for calculating student academic performance.
 
-- View all countries and their flags
-- Add new countries
-- Search for a country
-- Update country information
-- Remove countries
-- Display total countries
+- Store student and subject information.
+- Calculate total marks and percentage.
+- Determine grades and pass/fail status.
+- Display student results.
 
-**Concepts:** Objects, Arrays, Loops, Functions and Object Properties.
+**Concepts practised:** Functions, arrow functions, conditions and calculations.
 
----
+### 5. 📝 Smart Examination System
+
+A console-based examination project.
+
+- Display questions and answer choices.
+- Accept student answers.
+- Calculate scores.
+- Display examination results.
+
+**Concepts practised:** Functions, arrays, loops and conditional statements.
 
 ## 📂 Repository Structure
 
@@ -129,76 +135,73 @@ JavaScript-Series/
 │   ├── objects.js
 │   └── FSP-CountryInfo.js
 │
+├── day6.js/
+│   ├── nested-objects.js
+│   └── FSP-Movie-Booking.js
+│
 └── README.md
 ```
 
-## 💻 Technologies & Tools
+## 🧰 Technologies & Tools
 
 <p>
   <img src="https://skillicons.dev/icons?i=javascript,nodejs,vscode,git,github" />
 </p>
 
-- **JavaScript:** Primary programming language.
-- **Node.js:** Running JavaScript applications.
-- **Visual Studio Code:** Code editor.
-- **Git & GitHub:** Version control and progress tracking.
+| Tool | Purpose |
+|---|---|
+| JavaScript | Main programming language |
+| Node.js | Running JavaScript code |
+| Visual Studio Code | Writing and managing code |
+| Git | Version control |
+| GitHub | Hosting code and tracking progress |
 
-## 📅 My Daily Learning Routine
-
-Every day is an opportunity to improve my programming skills.
+## 🔁 My Daily Learning Workflow
 
 ```text
-       MY DAILY DEVELOPMENT CYCLE
-
-          📚 Learn a Concept
-                  |
-                  ▼
-          💻 Write Code
-                  |
-                  ▼
-          🧠 Solve Challenges
-                  |
-                  ▼
-          🛠️ Build a Project
-                  |
-                  ▼
-          🚀 Push to GitHub
-                  |
-                  ▼
-            Repeat Daily!
+        📚 Learn a Concept
+                |
+                v
+         💻 Write Code
+                |
+                v
+       🧠 Solve Exercises
+                |
+                v
+        🛠️ Build a Project
+                |
+                v
+        📤 Commit & Push
+                |
+                v
+          Repeat Daily
 ```
 
-## 🎯 My Goal
+## 🎯 Long-Term Goal
 
-My goal is to develop strong programming fundamentals, become confident in problem-solving, and gradually move toward building real-world applications.
+My goal is to build strong programming fundamentals, become confident in problem-solving, and use that foundation to develop real-world software.
 
-I'm particularly interested in exploring:
+As I progress, I plan to explore:
 
 - Advanced JavaScript
-- Backend Development
-- APIs and Databases
-- Full-Stack Development
-- Artificial Intelligence
+- Backend development and APIs
+- Databases
+- Full-stack development
+- Artificial Intelligence and automation
 
-This repository represents the beginning of a much bigger journey toward becoming an **AI Engineer**.
+This learning journey is one step toward my long-term goal of becoming an **AI Engineer**.
 
----
+## 📈 Follow the Journey
 
-## 📈 Follow My Journey
-
-I believe consistency matters more than perfection.
-
-Every commit represents something learned, every project represents something built, and every challenge is an opportunity to grow.
+I am learning consistently, improving through practice, and building projects one step at a time. This repository will continue to evolve with every new lesson and milestone.
 
 <p align="center">
-  <b>One Day. One Lesson. One Step Forward. 🚀</b>
+  <b>Learn. Practise. Build. Repeat. 🚀</b>
 </p>
 
 <p align="center">
   Made with ❤️ and JavaScript by <b>Hassan Ali</b>
-</p>
-
-<p align="center">
+  <br />
   <a href="https://github.com/HafizHassanAlee">GitHub Profile</a> •
-  <a href="https://github.com/HafizHassanAlee/JavaScript-Series">JavaScript Series Repository</a>
+  <a href="https://github.com/HafizHassanAlee/JavaScript-Series">JavaScript Series</a>
 </p>
