@@ -1,43 +1,20 @@
-    function choice() {
-    console.log("================================");
-    console.log("      CINEMA BOOKING SYSTEM");
-    console.log("================================\n");
-    
-    console.log("1. View Movies");
-    console.log("2. Select Movie");
-    console.log("3. View Available Seats");
-    console.log("4. Book Ticket");
-    console.log("5. Cancel Booking");
-    console.log("6. View My Bookings");
-    console.log("7. Calculate Total Bill");
-    console.log("8. Exit\n");
-    choice = prompt("Enter your choice: ");
-    }
 
-    choice()
 
-    let running =true;
+const movies = [
+  { title: "Avatar: The Way of Water", price: 12.00 },
+  { title: "Top Gun: Maverick", price: 10.00 },
+  { title: "Dune: Part Two", price: 15.00 },
+  { title: "John Wick: Chapter 4", price: 11.00 },
+  { title: "Interstellar", price: 13.00 }
+];
 
-    while(running){
-        choice();
-        if (choice==1){
-            view_movies();
-        } else if (choice==2){
-            select_movie();
-        } else if (choice==3){
-            view_available_seats();
-        } else if (choice==4){
-            book_ticket();
-        } else if (choice==5){
-            cancel_booking();
-        } else if (choice==6){
-            view_my_bookings();
-        } else if (choice==7){
-            calculate_total_bill();
-        } else if (choice==8){
-            running=false;
-        } else {
-            console.log("Enter Valid Input .");
-            choice();
-        }
-    }
+let selectedMovie = null;
+let myBookings = [];      // Stores user's booked seat codes
+let bookedSeats = [];     // Tracks globally reserved seats across the theater
+
+let seatGrid = [
+  ["A1", "A2", "A3", "A4"],
+  ["B1", "B2", "B3", "B4"],
+  ["C1", "C2", "C3", "C4"],
+  ["D1", "D2", "D3", "D4"]
+];
