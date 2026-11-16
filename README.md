@@ -38,7 +38,8 @@ This is an actively growing repository. Topics, exercises, and projects will be 
 | Day 03 | Functions, arrow functions and return values | Student Result Management System |
 | Day 04 | Arrays, indexing, loops and array operations | Personal Expense Tracker |
 | Day 05 | JavaScript objects, properties and object operations | World Flags Manager |
-| Day 06 | Nested objects, accessing nested properties, adding/updating/deleting properties, object methods and object loops | Student profile practice and Cinema Booking System development |
+| Day 06 | Nested objects, accessing nested properties, adding/updating/deleting properties, object methods and object loops | Cinema Booking System development |
+| Day 07 | Object methods: `Object.keys()`, `Object.values()`, `Object.entries()`, adding/updating/deleting properties, and iterating with `for...in` | Student Profile Manager |
 
 > **Learning in progress:** This roadmap will be updated as new lessons and projects are completed.
 
@@ -46,7 +47,26 @@ This is an actively growing repository. Topics, exercises, and projects will be 
 
 I believe programming becomes clearer when concepts are applied to practical problems. These projects are developed alongside my daily learning.
 
-### 1. 🎬 Cinema Booking System — In Progress
+### 1. 🎓 Student Profile Manager — Day 07
+
+A console-based student profile management project built with JavaScript objects. It displays student information, explores object keys and values, and updates the profile.
+
+**Features:**
+- Store student details such as name, age, roll number, department, semester and city.
+- Display the profile using `Object.entries()`.
+- Retrieve property names with `Object.keys()`.
+- Retrieve property values with `Object.values()`.
+- Add an email property and update the student's age.
+- Delete the city property.
+- Display the final updated profile.
+
+**Concepts practised:** Objects, `Object.keys()`, `Object.values()`, `Object.entries()`, property addition, property updates, `delete`, loops, array indexing and template literals.
+
+**Source files:**
+- [object-methods.js](day7.js/object-methods.js)
+- [FSP-student-profile-manager.js](day7.js/FSP-student-profile-manager.js)
+
+### 2. 🎬 Cinema Booking System — In Progress
 
 A console-based cinema booking application. The current code includes the movie list, selection flow, seat layout, booking operations and bill calculation logic.
 
@@ -63,7 +83,7 @@ A console-based cinema booking application. The current code includes the movie 
 
 **Source:** [day6.js/FSP-Movie-Booking.js](day6.js/FSP-Movie-Booking.js)
 
-### 2. 🌍 World Flags Manager
+### 3. 🌍 World Flags Manager
 
 A country information management practice project.
 
@@ -76,7 +96,7 @@ A country information management practice project.
 
 **Concepts practised:** Objects, arrays, loops, functions and object properties.
 
-### 3. 💰 Personal Expense Tracker
+### 4. 💰 Personal Expense Tracker
 
 A simple expense management application.
 
@@ -87,7 +107,7 @@ A simple expense management application.
 
 **Concepts practised:** Arrays, loops, functions and array operations.
 
-### 4. 🎓 Student Result Management System
+### 5. 🎓 Student Result Management System
 
 A practice application for calculating student academic performance.
 
@@ -98,7 +118,7 @@ A practice application for calculating student academic performance.
 
 **Concepts practised:** Functions, arrow functions, conditions and calculations.
 
-### 5. 📝 Smart Examination System
+### 6. 📝 Smart Examination System
 
 A console-based examination project.
 
