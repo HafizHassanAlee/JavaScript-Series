@@ -56,3 +56,9 @@ for (let i = 0; i < final.length; i++) {
     console.log(`${key}: ${value}`);
 
 }
+
+console.log(`\n----------NUMBER OF PROPERTIES----------------\n`)
+
+let No_of_Properties = Object.entries(student).length;
+
+console.log(`Number of Students = ${No_of_Properties}`)
