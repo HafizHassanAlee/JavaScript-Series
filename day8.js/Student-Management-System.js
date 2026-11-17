@@ -104,6 +104,40 @@ function searchStudent(){
     }
 }
 
+function updateStudentMarks(){
+    let studentToUpdate = prompt("Enter The Name of Student To Update Marks : ")
+    let toUpdate;
+    if (studentToUpdate){
+        for(let i = 0; i < students.length; i++){ // Fixed: Removed '- 1'
+            if (studentToUpdate == students[i].name){
+                toUpdate = students[i]; 
+                break;
+            }
+        }
+    }
+
+    if(toUpdate){
+        console.log("---------- SEARCHED STUDENT ----------")
+        console.log(`Name : ${toUpdate.name}`);
+        console.log(`RollNo : ${toUpdate.rollNo}`);
+        console.log(`Marks : ${toUpdate.marks}`);
+        console.log(`Department : ${toUpdate.department}`);
+    } else {
+        console.log("Student not found.");
+    }
+
+    let newMarks = prompt("Enter The Marks To Update : ");
+    if (studentToUpdate){
+        for(let i = 0; i < students.length; i++){ // Fixed: Removed '- 1'
+            if (studentToUpdate == students[i].name){
+                studentToUpdate.marks = newMarks; 
+                break;
+            }
+        }
+    }
+    console.log("Marks Updated...")
+}
+
 
 
 
