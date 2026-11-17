@@ -33,8 +33,8 @@ let students = [
 
 function addStudent(){
     let name = prompt("Enter Your Name : ")
-    let rollNo = prompt("Enter Your Roll No. : ")
-    let marks = prompt("Enter Your Marks : ")
+    let rollNo = Number(prompt("Enter Your Roll No. : "))
+    let marks = Number(prompt("Enter Your Marks : "))
     let department = prompt("Enter Your Department : ")
 
     studentToAdd = {
@@ -52,7 +52,10 @@ function addStudent(){
 function displayAllStudents(){
     console.log("\n----------ALL STUDENTS----------\n")
     for(let i=0; i<students.length;i++){
-        console.log(`${i+1}. ${students[i].name}`)
+        console.log(`Name : ${students[i].name}`)
+        console.log(`Roll No. : ${students[i].rollNo}`)
+        console.log(`Marks : ${students[i].marks}`)
+        console.log(`Department : ${students[i].department}`)
     }
 }
 
@@ -175,7 +178,7 @@ function checkPassFail(){
             studentMarks = students[i].marks;
         }
     }
-    if (studentMarks>50 && studentMarks<100){
+    if (studentMarks>=50 && studentMarks<=100){
         console.log("Student Has Passed..")
     } else if (studentMarks>0 && studentMarks <50){
         console.log("Student Has Failed..")
@@ -189,13 +192,14 @@ function findTopStudent(){
     let highest=0,highestAchiever;
     for (let i = 0; i < students.length; i++)
             if (students[i].marks>highest){
+            highest = students[i].marks;
             highestAchiever = students[i]; 
         }
     
 
     console.log("---------- HIGHEST ACHIEVER STUDENT ----------")
     console.log(`Name : ${highestAchiever.name}`);
-    console.log(`RollNo : ${highestAchiever.rollNo}`);
+    console.log(`RollNo : ${highestAchiever.rollNo}`);  
     console.log(`Marks : ${highestAchiever.marks}`);
     console.log(`Department : ${highestAchiever.department}`);
 
