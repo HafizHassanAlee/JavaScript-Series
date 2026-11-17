@@ -137,19 +137,26 @@ function updateStudentMarks() {
 
 
 function deleteStudent(){
-    studentToDelete = prompt("Enter The Name of Student To Delete : ");
-    let indexNo;
+    let studentToDelete = prompt("Enter The Name of Student To Delete : ");
+    let indexNo = -1; // Initialize with an invalid index (-1)
+
+    // Find the index of the student
     for(let i = 0; i < students.length; i++){ 
-            if (studentToDelete == students[i].name){
-                indexNo = i; 
-                    break;
-            }
+        if (studentToDelete.toLowerCase() === students[i].name.toLowerCase()){
+            indexNo = i; 
+            break;
         }
+    }
 
-    delete students[indexNo];
-    console.log("Student Deleted Successfully...");
+    // Check if the student was actually found
+    if (indexNo !== -1) {
+        // .splice() safely removes the element and closes the gap
+        students.splice(indexNo, 1);
+        console.log("✅ Student Deleted Successfully...");
+    } else {
+        console.log("❌ Student not found.");
+    }
 }
-
 
 function calculateAverageMarks(){
     let sum=0,totalnum=0;
