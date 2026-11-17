@@ -49,7 +49,12 @@ function addStudent(){
 
 }
 
-
+function displayAllStudents(){
+    console.log("\n----------ALL STUDENTS----------\n")
+    for(let i=0; i<students.length-1;i++){
+        console.log(`${i+1}. ${students[i].name}`)
+    }
+}
 
 
 
