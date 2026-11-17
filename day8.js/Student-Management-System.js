@@ -57,7 +57,7 @@ function displayAllStudents(){
 }
 
 function searchStudent(){
-    let searchby = Number(prompt("1. To Find By Name \n2. To Find By Roll No."));
+    let searchby = Number(prompt("1. To Find By Name \n2. To Find By Roll No.\nEnter Your Choice : "));
     let nametoFind;
     let rolltoFind;
     
