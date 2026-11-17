@@ -181,6 +181,22 @@ function checkPassFail(){
 }
 
 
+function findTopStudent(){
+    let highest=0,highestAchiever;
+    for (let i = 0; i < students.length; i++)
+            if (students[i].marks>highest){
+            highestAchiever = students[i]; 
+        }
+    
+
+    console.log("---------- HIGHEST ACHIEVER STUDENT ----------")
+    console.log(`Name : ${highestAchiever.name}`);
+    console.log(`RollNo : ${highestAchiever.rollNo}`);
+    console.log(`Marks : ${highestAchiever.marks}`);
+    console.log(`Department : ${highestAchiever.department}`);
+
+    }
+
 
 
 
