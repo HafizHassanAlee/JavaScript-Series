@@ -163,6 +163,22 @@ function calculateAverageMarks(){
     console.log(`Average of Marks is : ${sum/totalnum}`);
 }
 
+function checkPassFail(){
+    let studentMarks;
+    studentToCheck = prompt("Enter The Name of Student To Check Passing Status : ");
+    for (let i=0; i<students.length;i++){
+        if (studentToCheck==students[i].name){
+            studentMarks = students[i].marks;
+        }
+    }
+    if (studentMarks>50 && studentMarks<100){
+        console.log("Student Has Passed..")
+    } else if (studentMarks>0 && studentMarks <50){
+        console.log("Student Has Failed..")
+    } else {
+        console.log("There is Error in Input or System...")
+    }
+}
 
 
 
