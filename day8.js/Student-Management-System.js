@@ -56,7 +56,53 @@ function displayAllStudents(){
     }
 }
 
+function searchStudent(){
+    let searchby = Number(prompt("1. To Find By Name \n2. To Find By Roll No."));
+    let nametoFind;
+    let rolltoFind;
+    
+    switch(searchby){
+        case 1:
+            nametoFind = prompt("Enter the Name of Student To Find : "); // Removed 'let'
+            break;
+        case 2:
+            rolltoFind = Number(prompt("Enter the Roll No. of Student To Find : ")); // Removed 'let' & converted to Number
+            break;    
+        default:
+            console.log("Input Was not Valid..");
+            return;
+    }
+    
+    let toFind;
 
+    if (nametoFind){
+        for(let i = 0; i < students.length; i++){ // Fixed: Removed '- 1'
+            if (nametoFind === students[i].name){
+                toFind = students[i]; 
+                break;
+            }
+        }
+    }
+
+    if (rolltoFind){
+        for(let i = 0; i < students.length; i++){ // Fixed: Removed '- 1'
+            if (rolltoFind === students[i].rollNo){
+                toFind = students[i]; 
+                break;
+            }
+        }
+    }
+
+    if(toFind){
+        console.log("---------- SEARCHED STUDENT ----------")
+        console.log(`Name : ${toFind.name}`);
+        console.log(`RollNo : ${toFind.rollNo}`);
+        console.log(`Marks : ${toFind.marks}`);
+        console.log(`Department : ${toFind.department}`);
+    } else {
+        console.log("Student not found.");
+    }
+}
 
 
 
