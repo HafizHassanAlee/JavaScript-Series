@@ -40,6 +40,7 @@ This is an actively growing repository. Topics, exercises, and projects will be 
 | Day 05 | JavaScript objects, properties and object operations | World Flags Manager |
 | Day 06 | Nested objects, accessing nested properties, adding/updating/deleting properties, object methods and object loops | Cinema Booking System development |
 | Day 07 | Object methods: `Object.keys()`, `Object.values()`, `Object.entries()`, adding/updating/deleting properties, and iterating with `for...in` | Student Profile Manager |
+| Day 08 | Arrays of objects, accessing and updating object properties inside arrays, searching records, loops, functions, conditions, and array methods | Student Records Management System |
 
 > **Learning in progress:** This roadmap will be updated as new lessons and projects are completed.
 
@@ -47,6 +48,28 @@ This is an actively growing repository. Topics, exercises, and projects will be 
 
 I believe programming becomes clearer when concepts are applied to practical problems. These projects are developed alongside my daily learning.
 
+### 0. 🧑‍🎓 Student Records Management System — Day 08
+
+A menu-driven student record manager built with an array of student objects. It brings together arrays and objects in a practical console application.
+
+**Features implemented:**
+- Add a student with a name, roll number, marks and department.
+- Display all student records.
+- Search for a student by name or roll number.
+- Update a student's marks.
+- Delete a student record.
+- Calculate the class average.
+- Check a student's pass/fail status.
+- Find and display the student with the highest marks.
+- Navigate the features through a repeating menu.
+
+**Concepts practised:** Arrays of objects, object properties, array indexing, `push()`, `splice()`, `for` loops, functions, `switch`, `if/else`, `Number()`, `prompt()` and template literals.
+
+**Source files:**
+- [arrays-of-objects.js](day8.js/arrays-of-objects.js)
+- [Student-Management-System.js](day8.js/Student-Management-System.js)
+
+**Current learning note:** This is a learning project and can be improved further with stronger input validation, duplicate roll-number checks, and additional empty-list handling.
 ### 1. 🎓 Student Profile Manager — Day 07
 
 A console-based student profile management project built with JavaScript objects. It displays student information, explores object keys and values, and updates the profile.
@@ -158,6 +181,14 @@ JavaScript-Series/
 ├── day6.js/
 │   ├── nested-objects.js
 │   └── FSP-Movie-Booking.js
+│
+├── day7.js/
+│   ├── object-methods.js
+│   └── FSP-student-profile-manager.js
+│
+├── day8.js/
+│   ├── arrays-of-objects.js
+│   └── Student-Management-System.js
 │
 └── README.md
 ```
