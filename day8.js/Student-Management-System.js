@@ -154,6 +154,16 @@ function deleteStudent(){
 }
 
 
+function calculateAverageMarks(){
+    let sum=0,totalnum=0;
+    for (let i=0; i<students.length;i++){
+        sum = sum + students[i].marks;
+        totalnum = totalnum +1;
+    }
+    console.log(`Average of Marks is : ${sum/totalnum}`);
+}
+
+
 
 
 
