@@ -51,7 +51,7 @@ function addStudent(){
 
 function displayAllStudents(){
     console.log("\n----------ALL STUDENTS----------\n")
-    for(let i=0; i<students.length-1;i++){
+    for(let i=0; i<students.length;i++){
         console.log(`${i+1}. ${students[i].name}`)
     }
 }
@@ -138,6 +138,20 @@ function updateStudentMarks(){
     console.log("Marks Updated...")
 }
 
+
+function deleteStudent(){
+    studentToDelete = prompt("Enter The Name of Student To Delete : ");
+    let indexNo;
+    for(let i = 0; i < students.length; i++){ 
+            if (studentToDelete == students[i].name){
+                indexNo = i; 
+                    break;
+            }
+        }
+
+    delete students[indexNo];
+    console.log("Student Deleted Successfully...");
+}
 
 
 
