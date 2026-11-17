@@ -33,9 +33,9 @@ let students = [
 
 function addStudent(){
     let name = prompt("Enter Your Name : ")
-    let rollNo = prompt("Enter Your Name : ")
-    let marks = prompt("Enter Your Name : ")
-    let department = prompt("Enter Your Name : ")
+    let rollNo = prompt("Enter Your Roll No. : ")
+    let marks = prompt("Enter Your Marks : ")
+    let department = prompt("Enter Your Department : ")
 
     studentToAdd = {
         name : name,
