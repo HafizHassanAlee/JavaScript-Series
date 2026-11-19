@@ -1,3 +1,6 @@
+const prompt = require("prompt-sync")({ sigint: true });
+
+// Initial Product Data
 let products = [
     { name: "Laptop", price: 80000, stock: 5 },
     { name: "Mouse", price: 1500, stock: 20 },
@@ -6,50 +9,146 @@ let products = [
     { name: "Headphones", price: 5000, stock: 3 }
 ];
 
+// Helper function to format table rows cleanly
+function printProductRow(product) {
+    const nameCol = product.name.padEnd(14, " ");
+    const priceCol = `Rs. ${product.price}`.padEnd(14, " ");
+    console.log(`${nameCol}${priceCol}Stock: ${product.stock}`);
+}
 
-function displayAllProducts(){
-    console.log("================================");
-    console.log("    ALL PRODUCTS");
-    console.log("================================");
-    console.log("Name       Price      Stock");
-    console.log("================================");
+// 1. Display All Products (forEach)
+function displayAllProducts() {
+    console.log("\nALL PRODUCTS\n");
+    if (products.length === 0) {
+        console.log("Inventory is empty.");
+        return;
+    }
+    products.forEach((product) => {
+        printProductRow(product);
+    });
+}
 
-    for(let i=0;i<products.length;i++){
-        console.log(`${products[i].name}  ${products[i].price}  ${products[i].stock}`)
+// 2. Display Available Products (filter)
+function displayAvailableProducts() {
+    console.log("\nAVAILABLE PRODUCTS\n");
+    const available = products.filter((product) => product.stock > 0);
+
+    if (available.length === 0) {
+        console.log("No products currently in stock.");
+        return;
+    }
+    available.forEach((product) => {
+        printProductRow(product);
+    });
+}
+
+// 3. Search Product (find)
+function searchProduct() {
+    const searchName = prompt("Enter product name to search: ").trim();
+    const foundProduct = products.find(
+        (product) => product.name.toLowerCase() === searchName.toLowerCase()
+    );
+
+    console.log("\nSEARCH RESULT\n");
+    if (foundProduct) {
+        printProductRow(foundProduct);
+    } else {
+        console.log(`Product "${searchName}" not found in inventory.`);
     }
 }
 
-function displayAvailableProducts(){
-    console.log("================================");
-    console.log("    ALL AVAILABLE PRODUCTS");
-    console.log("================================");
-    console.log("Name       Price      Stock");
-    console.log("================================");
+// 4. Display Expensive Products (filter)
+function displayExpensiveProducts() {
+    console.log("\nEXPENSIVE PRODUCTS (> Rs. 5,000)\n");
+    const expensive = products.filter((product) => product.price > 5000);
 
-    for(let i=0;i<products.length;i++){
-        if (products[i].stock>0){
-        console.log(`${products[i].name}  ${products[i].price}  ${products[i].stock}`)
-        }}
-
+    if (expensive.length === 0) {
+        console.log("No products cost more than Rs. 5,000.");
+        return;
+    }
+    expensive.forEach((product) => {
+        printProductRow(product);
+    });
 }
 
+// 5. Extract Product Names (map)
+function displayProductNames() {
+    const productNames = products.map((product) => product.name);
+    console.log("\nPRODUCT NAMES ARRAY\n");
+    console.log(productNames);
+}
 
+// 6. Calculate Total Inventory Value (Loop & Accumulation)
+function calculateInventoryValue() {
+    let totalValue = 0;
 
+    for (let i = 0; i < products.length; i++) {
+        totalValue += products[i].price * products[i].stock;
+    }
 
+    console.log("\nTOTAL INVENTORY VALUE\n");
+    console.log(`Rs. ${totalValue.toLocaleString()}`);
+}
 
+// 7. Add New Product (push)
+function addNewProduct() {
+    console.log("\nADD NEW PRODUCT\n");
+    const name = prompt("Enter product name: ").trim();
+    if (!name) {
+        console.log("Product name cannot be empty.");
+        return;
+    }
 
+    const price = Number(prompt("Enter product price (Rs.): "));
+    const stock = Number(prompt("Enter stock quantity: "));
 
+    if (isNaN(price) || price < 0 || isNaN(stock) || stock < 0) {
+        console.log("Invalid price or stock. Please enter valid positive numbers.");
+        return;
+    }
 
+    const newProduct = {
+        name: name,
+        price: price,
+        stock: stock
+    };
 
+    products.push(newProduct);
+    console.log(`\n"${name}" has been added to the inventory!`);
+}
 
+// 8. Update Product Stock (find & property update)
+function updateProductStock() {
+    console.log("\nUPDATE PRODUCT STOCK\n");
+    const searchName = prompt("Enter product name to update: ").trim();
+    const product = products.find(
+        (p) => p.name.toLowerCase() === searchName.toLowerCase()
+    );
 
-function selectChoice(){
-let running=true;
-while (running==true){
-    console.log("================================");
+    if (!product) {
+        console.log(`Product "${searchName}" not found.`);
+        return;
+    }
+
+    console.log(`Current stock for ${product.name}: ${product.stock}`);
+    const newStock = Number(prompt("Enter new stock quantity: "));
+
+    if (isNaN(newStock) || newStock < 0) {
+        console.log("Invalid stock quantity. Update cancelled.");
+        return;
+    }
+
+    product.stock = newStock;
+    console.log(`Stock updated! ${product.name} now has ${product.stock} units.`);
+}
+
+// Main Menu Loop
+let isRunning = true;
+
+while (isRunning) {
+    console.log("\n================================");
     console.log("    PRODUCT INVENTORY SYSTEM");
-    console.log("================================");
-    console.log("");
+    console.log("================================\n");
     console.log("1. Display All Products");
     console.log("2. Display Available Products");
     console.log("3. Search Product");
@@ -58,40 +157,40 @@ while (running==true){
     console.log("6. Calculate Inventory Value");
     console.log("7. Add New Product");
     console.log("8. Update Product Stock");
-    console.log("9. Exit");
-    console.log("");
+    console.log("9. Exit\n");
 
-    
-    let choice = 0;
-    choice = Number(prompt("Enter Your Choice: "));
+    const choice = prompt("Enter Your Choice: ").trim();
 
-    console.log("");
-
-    if (choice === 1) {
-      displayAllProducts();
-    } else if (choice === 2) {
-      displayAvailableProducts();
-    } else if (choice === 3) {
-      searchProduct("Laptop");
-    } else if (choice === 4) {
-      displayExpensiveProducts();
-    } else if (choice === 5) {
-      displayProductNames();
-    } else if (choice === 6) {
-      calculateInventoryValue();
-    } else if (choice === 7) {
-      addNewProduct("Headphones", 150, 10);
-    } else if (choice === 8) {
-      updateProductStock("Mouse", 20);
-    } else if (choice === 9) {
-      console.log("Exiting System ...");
-      running=false;
-    } else {
-      console.log("Invalid Choice! Please enter a number from 1 to 9.");
+    switch (choice) {
+        case "1":
+            displayAllProducts();
+            break;
+        case "2":
+            displayAvailableProducts();
+            break;
+        case "3":
+            searchProduct();
+            break;
+        case "4":
+            displayExpensiveProducts();
+            break;
+        case "5":
+            displayProductNames();
+            break;
+        case "6":
+            calculateInventoryValue();
+            break;
+        case "7":
+            addNewProduct();
+            break;
+        case "8":
+            updateProductStock();
+            break;
+        case "9":
+            console.log("\nExiting Product Inventory System. Goodbye!");
+            isRunning = false;
+            break;
+        default:
+            console.log("\nInvalid choice! Please enter a number between 1 and 9.");
     }
-
 }
-}
-
-selectChoice()
-
