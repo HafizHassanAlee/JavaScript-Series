@@ -6,8 +6,31 @@ let products = [
     { name: "Headphones", price: 5000, stock: 3 }
 ];
 
-function selectChoice(){
 
+function displayAllProducts(){
+    console.log("================================");
+    console.log("    ALL PRODUCTS");
+    console.log("================================");
+    console.log("Name       Price      Stock");
+    console.log("================================");
+
+    for(let i=0;i<products.length;i++){
+        console.log(`${products[i].name}  ${products[i].price}  ${products[i].stock}`)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function selectChoice(){
 let running=true;
 while (running==true){
     console.log("================================");
