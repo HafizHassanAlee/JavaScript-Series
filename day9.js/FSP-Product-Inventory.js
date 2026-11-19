@@ -19,6 +19,19 @@ function displayAllProducts(){
     }
 }
 
+function displayAvailableProducts(){
+    console.log("================================");
+    console.log("    ALL AVAILABLE PRODUCTS");
+    console.log("================================");
+    console.log("Name       Price      Stock");
+    console.log("================================");
+
+    for(let i=0;i<products.length;i++){
+        if (products[i].stock>0){
+        console.log(`${products[i].name}  ${products[i].price}  ${products[i].stock}`)
+        }}
+
+}
 
 
 
