@@ -18,3 +18,7 @@ console.log(inStockProducts);
 let productNames = products.map(p => p.name);
 console.log(productNames);
 
+// 4. Check if any product is out of stock -> some()
+let hasOutOfStock = products.some(p => p.stock === 0);
+console.log(hasOutOfStock);
+
