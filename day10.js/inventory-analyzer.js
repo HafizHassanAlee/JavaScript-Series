@@ -13,3 +13,8 @@ console.log(productById);
 // 2. Display products with stock greater than 0 -> filter()
 let inStockProducts = products.filter(p => p.stock > 0);
 console.log(inStockProducts);
+
+// 3. Display only product names -> map()
+let productNames = products.map(p => p.name);
+console.log(productNames);
+
