@@ -23,3 +23,8 @@ let discountedProducts = products.map(function(product) {
 
 console.log(discountedProducts);
 
+let result2 = products.some(function(product) {
+    return product.price > 100000;
+});
+
+console.log(result2);
