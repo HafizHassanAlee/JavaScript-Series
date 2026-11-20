@@ -22,3 +22,6 @@ console.log(productNames);
 let hasOutOfStock = products.some(p => p.stock === 0);
 console.log(hasOutOfStock);
 
+// 5. Check if all products cost more than 1000 -> every()
+let allAbove1000 = products.every(p => p.price > 1000);
+console.log(allAbove1000);
