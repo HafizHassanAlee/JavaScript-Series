@@ -1,0 +1,27 @@
+let products = [
+    { id: 1, name: "Laptop", price: 80000, stock: 5 },
+    { id: 2, name: "Mouse", price: 1500, stock: 0 },
+    { id: 3, name: "Keyboard", price: 3000, stock: 8 },
+    { id: 4, name: "Monitor", price: 25000, stock: 3 },
+    { id: 5, name: "Headphones", price: 5000, stock: 0 }
+];
+
+// 1. Find a product using its ID -> find()
+let productById = products.find(p => p.id === 3);
+console.log(productById);
+
+// 2. Display products with stock greater than 0 -> filter()
+let inStockProducts = products.filter(p => p.stock > 0);
+console.log(inStockProducts);
+
+// 3. Display only product names -> map()
+let productNames = products.map(p => p.name);
+console.log(productNames);
+
+// 4. Check if any product is out of stock -> some()
+let hasOutOfStock = products.some(p => p.stock === 0);
+console.log(hasOutOfStock);
+
+// 5. Check if all products cost more than 1000 -> every()
+let allAbove1000 = products.every(p => p.price > 1000);
+console.log(allAbove1000);
