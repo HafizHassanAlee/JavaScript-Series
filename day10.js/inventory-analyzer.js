@@ -13,15 +13,3 @@ console.log(productById);
 // 2. Display products with stock greater than 0 -> filter()
 let inStockProducts = products.filter(p => p.stock > 0);
 console.log(inStockProducts);
-
-// 3. Display only product names -> map()
-let productNames = products.map(p => p.name);
-console.log(productNames);
-
-// 4. Check if any product is out of stock -> some()
-let hasOutOfStock = products.some(p => p.stock === 0);
-console.log(hasOutOfStock);
-
-// 5. Check if all products cost more than 1000 -> every()
-let allAbove1000 = products.every(p => p.price > 1000);
-console.log(allAbove1000);
