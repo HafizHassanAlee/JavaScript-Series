@@ -27,7 +27,7 @@ console.log("Yes there is one product with cost less than 2000");
 //Exercise 5 — every()
 //Check whether every product has a price greater than 1000.
 let check = products.every((prod)=>prod.price>1000);
-if (prodcost==true)
+if (check==true)
 console.log("Yes there are alll product with cost greater than 1000");
 
 
