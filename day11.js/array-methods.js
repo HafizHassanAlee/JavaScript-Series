@@ -21,3 +21,20 @@ console.log(name);
 let prodcost = products.some((prod)=>prod.price<2000);
 if (prodcost==true)
 console.log("Yes there is one product with cost less than 2000");
+
+
+
+//Exercise 5 — every()
+//Check whether every product has a price greater than 1000.
+let check = products.every((prod)=>prod.price>1000);
+if (prodcost==true)
+console.log("Yes there are alll product with cost greater than 1000");
+
+
+//Exercise 6 — Challenge
+//Find all products whose price is greater than 2000 and create a new array containing only their names.
+let productNames = products
+    .filter((p) => p.price > 2000)
+    .map((p) => p.name);
+
+console.log(productNames);
