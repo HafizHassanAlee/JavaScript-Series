@@ -41,12 +41,44 @@ This is an actively growing repository. Topics, exercises, and projects will be 
 | Day 06 | Nested objects, accessing nested properties, adding/updating/deleting properties, object methods and object loops | Cinema Booking System development |
 | Day 07 | Object methods: `Object.keys()`, `Object.values()`, `Object.entries()`, adding/updating/deleting properties, and iterating with `for...in` | Student Profile Manager |
 | Day 08 | Arrays of objects, accessing and updating object properties inside arrays, searching records, loops, functions, conditions, and array methods | Student Records Management System |
+| Day 10 | JavaScript array methods: `find()`, `filter()`, `map()`, `some()` and `every()` | Inventory Analyzer |
+| Day 11 | Practice with array methods, callback parameters, searching products, checking conditions, and chaining `filter()` with `map()` | Array Methods Exercises |
 
 > **Learning in progress:** This roadmap will be updated as new lessons and projects are completed.
 
 ## 🛠️ Projects & Practical Applications
 
 I believe programming becomes clearer when concepts are applied to practical problems. These projects are developed alongside my daily learning.
+
+### 0.5. 📦 Inventory Analyzer — Day 10
+
+A small product inventory analysis exercise using an array of product objects. It demonstrates how JavaScript array methods can search, filter, transform, and check product data.
+
+**Features implemented:**
+- Find a product by its ID using `find()`.
+- Get products that have stock available using `filter()`.
+- Create a new array containing product names using `map()`.
+- Check whether any product is out of stock using `some()`.
+- Check whether every product costs more than 1,000 using `every()`.
+
+**Concepts practised:** Arrays of objects, callback functions, arrow functions, conditions, and the `find()`, `filter()`, `map()`, `some()`, and `every()` array methods.
+
+**Source:** [inventory-analyzer.js](day10.js/inventory-analyzer.js)
+
+### 0.6. 🧪 Array Methods Exercises — Day 11
+
+A focused practice file to strengthen understanding of JavaScript array methods using product data.
+
+**Exercises completed:**
+- Find the product whose ID is 3.
+- Create a new array containing product names.
+- Check whether at least one product costs less than 2,000.
+- Check whether every product costs more than 1,000.
+- Filter products costing more than 2,000 and then map the result to product names.
+
+**Concepts practised:** Callback parameters, arrow functions, return values, boolean results, `find()`, `some()`, `every()`, `filter()`, `map()`, and method chaining.
+
+**Source:** [array-methods.js](day11.js/array-methods.js)
 
 ### 0. 🧑‍🎓 Student Records Management System — Day 08
 
